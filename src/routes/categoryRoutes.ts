@@ -1,5 +1,5 @@
 import { Hono } from "hono";
-import { CategoryService } from "../services/categeroy-service";
+import { CategoryService } from "../services/category-service";
 import { HTTPException } from "hono/http-exception";
 
 export const categoryRouter = new Hono();

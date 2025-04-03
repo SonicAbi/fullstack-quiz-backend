@@ -1,6 +1,6 @@
 import { relations } from "drizzle-orm";
 import { integer, pgTable, serial, text } from "drizzle-orm/pg-core";
-import { createInsertSchema } from "drizzle-zod";
+import { createInsertSchema, createSelectSchema } from "drizzle-zod";
 import type { z } from "zod";
 
 // Category Table
@@ -12,6 +12,12 @@ export const categoriesTable = pgTable("category", {
 export const categoryRelations = relations(categoriesTable, ({ many }) => ({
   questions: many(questionsTable),
 }));
+
+export const selectCategory = createSelectSchema(categoriesTable)
+export const insertCategory = createInsertSchema(categoriesTable)
+
+export type Category = z.infer<typeof selectCategory>
+export type NewCategory = z.infer<typeof insertCategory>
 
 
 // Question Table
@@ -32,5 +38,8 @@ export const questionRelations = relations(questionsTable, ({ one }) => ({
   }),
 }));
 
+export const selectQuestion = createSelectSchema(questionsTable)
 export const insertQuestion = createInsertSchema(questionsTable);
+
+export type Question = z.infer<typeof selectQuestion>
 export type NewQuestion = z.infer<typeof insertQuestion>;

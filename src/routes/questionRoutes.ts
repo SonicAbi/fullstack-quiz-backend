@@ -1,12 +1,10 @@
 import { Hono } from "hono";
+import { QuestionService } from "../services/question-service";
 
-const router = new Hono()
+ export const questionRouter = new Hono()
 
-//Get routes
-router.get("/", )
-router.get("/category/:id", )
-
-//Post routes
-router.post("/", )
-
-export default router
+questionRouter.get("/", async (c) => {
+    const { category } = c.req.queries()
+    const questions = await QuestionService.getAllQuestion(category[0])
+    return c.json({data: questions})
+ } )

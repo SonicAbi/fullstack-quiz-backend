@@ -1,15 +1,43 @@
 services:
-  db:
+  backend:
+    container_name: backend
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file:
+      - .env
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DATABASE=FullstackQuizDB
+      - DATABASE_URL=postgresql://admin:password@postgres:5432/FullstackQuizDB?schema=public
+    depends_on:
+      postgres:
+        condition: service_healthy
+    volumes:
+      - .:/app/
+    restart: always
+    ports:
+      - 3000:3000
+
+  postgres:
       image: postgres:latest
-      container_name: FSQuizDB
+      restart: always
+      ports:
+        - 5432:5432
+      container_name: FullstackQuizDB
       environment:
+        POSTGRES_DB: FullstackQuizDB
         POSTGRES_USER: admin
         POSTGRES_PASSWORD: password
-        POSTGRES_DB: FSQuizDB
-      ports:
-        - "5432:5432"
       volumes:
         - pgdata:/var/lib/postgresql/data
+      healthcheck:
+        test:
+          ["CMD", "pg_isready", "-U", "postgres", "-d", "FullstackQuizDB"]
+        interval: 5s
+        timeout: 10s
+        retries: 5
 
 volumes:
   pgdata:

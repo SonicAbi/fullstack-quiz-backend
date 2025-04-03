@@ -3,12 +3,12 @@ import { z } from "zod";
 // Typing
 declare module "bun" {
   interface Env {
-    DB_URL: string;
+    DATABASE_URL: string;
   }
 }
 
 const EnvSchema = z.object({
-  DB_URL: z.string().url(),
+  DATABASE_URL: z.string().url(),
 });
 
 const parsedEnv = EnvSchema.safeParse(process.env);

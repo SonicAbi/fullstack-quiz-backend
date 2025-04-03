@@ -4,8 +4,8 @@ import * as schema from "./schemas.ts"
 import { ENV } from "./env.ts";
 
 const pool = new Pool({
-    connectionString: ENV.DB_URL
-})
+  connectionString: ENV.DATABASE_URL,
+});
 
 export const db = drizzle({ client: pool, schema })
 

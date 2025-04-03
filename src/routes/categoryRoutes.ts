@@ -1,9 +1,17 @@
 import { Hono } from "hono";
+import { CategoryService } from "../services/categeroy-service";
+import { HTTPException } from "hono/http-exception";
 
+export const categoryRouter = new Hono();
 
-const router = new Hono()
-
-router.get("/", )
-
-
-export default router
+categoryRouter.get("/", async (c) => {
+  const { category } = c.req.query();
+  if (category) {
+    const result = await CategoryService.getOneCategory(category);
+    if (!result)
+      throw new HTTPException(404, { message: "No such Category found" });
+    return c.json(result, 200);
+  }
+  const categories = await CategoryService.getAllCategories();
+  return c.json({ data: categories }, 200);
+});

@@ -1,0 +1,27 @@
+{
+  "name": "fullstack-quiz-db",
+  "module": "app.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "^1.2.8",
+    "@types/pg": "^8.11.11",
+    "bun-types": "^1.2.8",
+    "drizzle-kit": "^0.30.6"
+  },
+  "scripts": {
+    "dev": "bun run --hot src/app.ts",
+    "db:push": "drizzle-kit push",
+    "db:studio": "drizzle-kit studio",
+    "db:seed": "bun run src/db/seed.ts"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "drizzle-orm": "^0.41.0",
+    "drizzle-zod": "^0.7.1",
+    "hono": "^4.7.5",
+    "pg": "^8.14.1",
+    "zod": "^3.24.2"
+  }
+}

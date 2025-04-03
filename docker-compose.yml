@@ -1,0 +1,35 @@
+services:
+  db:
+      image: postgres:latest
+      container_name: my-postgres
+      environment:
+        POSTGRES_USER: admin
+        POSTGRES_PASSWORD: password
+        POSTGRES_DB: FSQuizDB
+      ports:
+        - 5432:5432
+      volumes:
+        - db-data:/var/lib/postgresql/data
+        - ./docker/initdb:/docker-entrypoint-initdb.d
+      restart: unless-stopped
+      healthcheck:
+        test: ["CMD-SHELL", "pg_isready -U user -d FSQuizDB"]
+        interval: 10s
+        timeout: 5s
+        retries: 5
+
+  app:
+      build: .
+      container_name: question-db-services
+      environment:
+        DATABASE_URL: postgresql://admin:password@db:5432/FSQuizDB
+        PORT: 3000
+        NODE_ENV: production
+      ports:
+        - 3000:3000
+      depends_on:
+        db:
+          condition: service_healthy
+
+volumes:
+  db-data:

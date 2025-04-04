@@ -9,5 +9,5 @@ questionRouter.get("/", async (c) => {
   const fetchedQuestions = await QuestionService.getAllQuestion(category);
   if (fetchedQuestions.length === 0)
     throw new HTTPException(404, { message: "No such Category Found" });
-  return c.json({ data: fetchedQuestions });
+  return c.json(fetchedQuestions,200);
 });

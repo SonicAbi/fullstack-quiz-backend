@@ -41,5 +41,16 @@ export const questionRelations = relations(questionsTable, ({ one }) => ({
 export const selectQuestion = createSelectSchema(questionsTable)
 export const insertQuestion = createInsertSchema(questionsTable);
 
+export const categories = [
+  { id: 1, name: "API" },
+  { id: 2, name: "HtmlCss"},
+  {id : 3, name: "React"},
+  {id : 4, name: "Typescript"},
+  {id : 5, name: "Javascript"},
+  {id : 6, name: "Docker"},
+  {id : 7, name: "Datenbanken"},
+  {id: 8, name: "Kotlin"},
+];
+
 export type Question = z.infer<typeof selectQuestion>
 export type NewQuestion = z.infer<typeof insertQuestion>;

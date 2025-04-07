@@ -79,4 +79,10 @@ export const dockerQuestion: NewQuestion[] = [
       "CMD gibt den Standardbefehl an, der beim Starten des Containers ausgeführt wird.",
     code: null,
   },
+  {
+    categoryId: 6,
+    question: "Was ist der Zweck des Docker Befehls docker ps?",
+    answer:"docker ps zeigt eine Liste der aktuell laufenden Container an.",
+    code: null,
+  }
 ];

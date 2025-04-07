@@ -50,6 +50,7 @@ export const categories = [
   {id : 6, name: "Docker"},
   {id : 7, name: "Datenbanken"},
   {id: 8, name: "Kotlin"},
+  {id: 9, name: "Microservices"},
 ];
 
 export type Question = z.infer<typeof selectQuestion>

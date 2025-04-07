@@ -31,12 +31,6 @@ export const htmlCssQuestions: NewQuestion[] = [
   },
   {
     categoryId: 2,
-    question: "Was ist hier schief gelaufen?",
-    answer: "TR und TD wurden vertauscht, thead hat kein schließendes Tag.",
-    code: null,
-  },
-  {
-    categoryId: 2,
     question: "Was ist CSS und wofür wird es verwendet?",
     answer:
       "CSS (Cascading Style Sheet) ist eine Stylesheet-Sprache, die verwendet wird, um das Aussehen von HTML-Dokumenten zu beschreiben.",

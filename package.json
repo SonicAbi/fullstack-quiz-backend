@@ -10,6 +10,7 @@
   },
   "scripts": {
     "dev": "bun run --hot src/app.ts",
+    "build": "bun build src/app.ts --target node --outdir app",
     "db:push": "drizzle-kit push",
     "db:studio": "drizzle-kit studio",
     "db:seed": "bun run src/db/seed.ts"

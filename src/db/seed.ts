@@ -43,18 +43,19 @@ const loadSeedData = async () => {
 const seedQuestions = async () => {
   try {
     const allQuestions = await loadSeedData();
-    console.log(allQuestions);
     for (const question of allQuestions) {
       await db.insert(schema.questionsTable).values({
         categoryId: question.categoryId,
         question: question.question,
         answer: question.answer,
         code: question.code,
-      });
+      }).onConflictDoNothing();
     }
     console.log("Questions erfolgreich geseedet.🌱");
   } catch (error) {
     console.log("Fehler beim Laden der Questions.❗️", error);
+  } finally {
+    process.exit(0)
   }
 };
 

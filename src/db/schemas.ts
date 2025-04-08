@@ -13,12 +13,11 @@ export const categoryRelations = relations(categoriesTable, ({ many }) => ({
   questions: many(questionsTable),
 }));
 
-export const selectCategory = createSelectSchema(categoriesTable)
-export const insertCategory = createInsertSchema(categoriesTable)
+export const selectCategory = createSelectSchema(categoriesTable);
+export const insertCategory = createInsertSchema(categoriesTable);
 
-export type Category = z.infer<typeof selectCategory>
-export type NewCategory = z.infer<typeof insertCategory>
-
+export type Category = z.infer<typeof selectCategory>;
+export type NewCategory = z.infer<typeof insertCategory>;
 
 // Question Table
 export const questionsTable = pgTable("question", {
@@ -38,20 +37,21 @@ export const questionRelations = relations(questionsTable, ({ one }) => ({
   }),
 }));
 
-export const selectQuestion = createSelectSchema(questionsTable)
+export const selectQuestion = createSelectSchema(questionsTable);
 export const insertQuestion = createInsertSchema(questionsTable);
 
 export const categories = [
   { id: 1, name: "API" },
-  { id: 2, name: "HtmlCss"},
-  {id : 3, name: "React"},
-  {id : 4, name: "Typescript"},
-  {id : 5, name: "Javascript"},
-  {id : 6, name: "Docker"},
-  {id : 7, name: "Datenbanken"},
-  {id: 8, name: "Kotlin"},
-  {id: 9, name: "Microservices"},
+  { id: 2, name: "HtmlCss" },
+  { id: 3, name: "React" },
+  { id: 4, name: "Typescript" },
+  { id: 5, name: "Javascript" },
+  { id: 6, name: "Docker" },
+  { id: 7, name: "Datenbanken" },
+  { id: 8, name: "Kotlin" },
+  { id: 9, name: "Microservices" },
+  
 ];
 
-export type Question = z.infer<typeof selectQuestion>
+export type Question = z.infer<typeof selectQuestion>;
 export type NewQuestion = z.infer<typeof insertQuestion>;

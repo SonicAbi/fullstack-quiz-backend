@@ -66,5 +66,41 @@ export const datenbankQuestion : NewQuestion[] = [
         question: "Was benötigen NO - SQL DB's NICHT im Gegensatz zu relationalen Datenbanken?",
         answer: "Diese Datenbanken benötigen keine festgelegten Tabellenschemata und versuchen Joins zu vermeiden.",
         code: null,
+    },
+    {
+        categoryId: 7,
+        question:"Was ist der Zweck eines ORM?",
+        answer:"Ein ORM (Object-Relational Mapping) ermöglicht es, Daten aus einer relationalen Datenbank in Objekte zu mappen und umgekehrt. Dadurch kann man in einer Anwendung mit Objekten arbeiten, anstatt direkt SQL-Queries zu schreiben.",
+        code:null,
+    },
+    {
+        categoryId: 7,
+        question: "Was passiert, wenn man Beziehungen nicht in beide Richtungen definiert? (Drizzle-ORM)",
+        answer: "Wenn Beziehungen nicht in beide Richtungen definiert werden, kann es zu Inkonsistenzen und Fehlern bei der Abfrage oder Aktualisierung der Daten kommen.",
+        code:null,
+    },
+    {
+        categoryId: 7,
+        question: "Was sind die Vorteile von Axios im Gegenzug zu Fetch bei Datenbankanfragen?",
+        answer:"Automatisches Parsen von JSON,Automatisches abfangen von Fehlern,besseres Handling von Query Parametern.",
+        code:null,
+    },
+    {
+        categoryId: 7,
+        question: "Was ist der Hauptunterschied zwischen der Service-Schicht und der Repository-Schicht?",
+        answer:"Die Service-Schicht enthält die Geschäftslogik der Anwendung und nutzt Repositories für den Datenbankzugriff, während die Repository-Schicht für die direkte Durchführung der Datenbankabfragen (CRUD-Operationen) zuständig ist.",
+        code:null,
+    },
+    {
+        categoryId: 7,
+        question:"Nenne zwei Vorteile der Repository-Servie-Architektur.",
+        answer:"Bessere Wartbarkeit & Erweiterbarkeit\nEinfacheres Testen der einzelnen Komponenten.",
+        code:null
+    },
+    {
+        categoryId: 7,
+        question: "Aus welchen Komponenten besteht eine typische Repository-Service Architektur?",
+        answer:"Repositories,Services,Routes,ErrorMiddleware,index.ts",
+        code:null,
     }
 ]

@@ -27,6 +27,12 @@ export const microservicesQuestion : NewQuestion[] = [
     },
     {
         categoryId: 9,
+        question:"Was macht ein Interactors in der hexagonalen Architektur?",
+        answer:"Die Hauptaufgabe eines Interactors ist es, bestimmte Geschäfts- oder Validierungslogik umzusetzen und diese auf die Entitäten anzuwenden, ohne dass er direkt auf die Details der Speicherung oder der externen Systeme angewiesen ist.",
+        code:null,
+    },
+    {
+        categoryId: 9,
         question: "Was sind die Hauptvorteile von Microservices?",
         answer: "Skalierbarkeit einzelner Services,Flexibilität in Technologien,Fehlerisolierung und schnellere Entwicklung.",
         code:null,
@@ -59,6 +65,12 @@ export const microservicesQuestion : NewQuestion[] = [
         categoryId: 9,
         question: "Worüber kommunizieren einzelne Services miteinander?",
         answer:"Häufig werden APIs von Microservices als REST APIs implementiert, d.h. die Kommunikation erfolgt über den Austausch von JSON-Dokumenten über das HTTP-Protokoll.",
+        code:null,
+    },
+    {
+        categoryId: 9,
+        question: "Was versteht man unter dem Begriff 'Autonomie' als Architekturprinzip?",
+        answer:"Jeder Service in einer Microservice - Architektur kann jederzeit weiterentwickelt,deployt oder skaliert werden,ohne dabei andere Services zu beeinflussen.",
         code:null,
     }
 

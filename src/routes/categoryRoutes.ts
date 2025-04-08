@@ -13,5 +13,5 @@ categoryRouter.get("/", async (c) => {
     return c.json(result, 200);
   }
   const categories = await CategoryService.getAllCategories();
-  return c.json(categories, 200);
+  return c.json({ data: categories }, 200);
 });

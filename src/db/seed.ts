@@ -2,6 +2,7 @@ import * as schema from "./schemas";
 import { db } from "./drizzle";
 import path from "path";
 import * as fs from "fs";
+import { sql } from "drizzle-orm";
 
 const seedCategories = async () => {
   try {
@@ -58,6 +59,9 @@ const seedQuestions = async () => {
     process.exit(0)
   }
 };
-
+await db.execute(sql`DELETE FROM question`);
+await db.execute(sql`ALTER SEQUENCE question_id_seq RESTART WITH 1`);
+await db.execute(sql`DELETE FROM category`);
+await db.execute(sql`ALTER SEQUENCE category_id_seq RESTART WITH 1`);
 seedCategories();
 seedQuestions();

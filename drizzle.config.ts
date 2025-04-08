@@ -1,12 +1,11 @@
 import "dotenv/config";
 import { defineConfig } from "drizzle-kit";
-import { ENV } from "./src/db/env";
 
 export default defineConfig({
   out: "./src/db/migrations",
   schema: "./src/db/schemas.ts",
   dialect: "postgresql",
   dbCredentials: {
-    url: ENV.DATABASE_URL!,
+    url: `postgres://${process.env.PGUSER}:${process.env.PGPASSWORD}@${process.env.PGHOST}:${process.env.PGPORT}/${process.env.PGDATABASE}?sslmode=require`,
   },
 });

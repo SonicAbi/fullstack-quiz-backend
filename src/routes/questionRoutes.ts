@@ -16,3 +16,8 @@ questionRouter.get("/", async (c) => {
     200
   );
 });
+
+questionRouter.get("/random", async (c) => {
+  const fetchedQuestions = await QuestionService.fetchRandomQuestions();
+  return c.json({ data: fetchedQuestions }, 200);
+});

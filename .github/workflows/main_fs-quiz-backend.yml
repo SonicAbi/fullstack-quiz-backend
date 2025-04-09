@@ -52,7 +52,7 @@ jobs:
       id: deploy-to-webapp
       uses: azure/webapps-deploy@v3
       with:
-        app-name: 'fs-quiz'
+        app-name: 'fs-quiz-backend'
         slot-name: 'Production'
         package: .
         publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_4FEB1891011B4960A9746675EF0971FB }}

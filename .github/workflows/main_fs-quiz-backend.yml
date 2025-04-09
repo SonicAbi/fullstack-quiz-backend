@@ -22,11 +22,10 @@ jobs:
       run: |
         bun install
         bun run build
-        cp -r node_modules app/ 
-        cp package.json app/
+ 
 
     - name: Zip artifact for deployment
-      run: zip -r release.zip ./app
+      run: zip release.zip ./app
 
     - name: Upload artifact for deployment job
       uses: actions/upload-artifact@v4

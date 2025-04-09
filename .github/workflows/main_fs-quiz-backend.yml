@@ -55,4 +55,4 @@ jobs:
         app-name: 'fs-quiz-backend'
         slot-name: 'Production'
         package: .
-        publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_4FEB1891011B4960A9746675EF0971FB }}
+        publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_CD6B9D97D599457DA9BF421264F5340E }}

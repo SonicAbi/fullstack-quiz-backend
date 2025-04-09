@@ -44,7 +44,7 @@
 #     environment:
 #       name: 'Production'
 #       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
-    
+
 #     steps:
 #       - name: Download artifact from build job
 #         uses: actions/download-artifact@v4
@@ -53,7 +53,7 @@
 
 #       - name: Unzip artifact for deployment
 #         run: unzip release.zip
-      
+
 #       - name: 'Deploy to Azure Web App'
 #         id: deploy-to-webapp
 #         uses: azure/webapps-deploy@v3
@@ -62,7 +62,6 @@
 #           slot-name: 'Production'
 #           package: .
 #           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_4FEB1891011B4960A9746675EF0971FB }}
-
 
 name: Build and deploy Node.js app to Azure Web App -fs-quiz
 
@@ -117,5 +116,5 @@ jobs:
       with:
         app-name: 'fs-quiz'
         slot-name: 'Production'
-        publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_4CB3B4AAB5B94CBFAC7978882073D3A7 }}
         package: .
+        publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_4FEB1891011B4960A9746675EF0971FB }}

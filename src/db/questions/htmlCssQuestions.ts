@@ -88,4 +88,28 @@ export const htmlCssQuestions: NewQuestion[] = [
       "CSS-Variablen werden mit einem doppelten Bindestrich definiert und sind im :root-Selektor anzutreffen. Es sind sozusagen eigene Variablen. Wozu? Damit diese global verfügbar sind, der Code ist dadurch flexibler und leichter zu warten.",
     code: ":root {\n  --primary-color: #3498db;\n}\nbody {\n  background-color: var(--primary-color);\n}",
   },
+  {
+    categoryId:2,
+    question:"Was ermöglichen 'Media Queries'?",
+    answer:"Media Queries ermöglichen es, CSS-Regeln basierend auf Geräteeigenschaften wie Bildschirmbreite anzuwenden.",
+    code:"@media screen and (max-width: 600px) {/* CSS-Regeln für Bildschirme bis 600px Breite */}",
+  },
+  {
+    categoryId:2,
+    question:"Was ist BEM und warum wird es in der CSS-Entwicklung verwendet?",
+    answer:"BEM (Block, Element, Modifier) ist eine CSS-Methodologie, die darauf abzielt, sauberen, modularen und wartbaren Code zu schreiben. Sie wird verwendet, um die Struktur von CSS-Klassen klar und konsistent zu gestalten, sodass der Code leicht erweiterbar und wiederverwendbar ist.",
+    code:null
+  },
+  {
+    categoryId:2,
+    question:"Was ist ein häufiger Fehler in der Anwendung von BEM?",
+    answer:" Ein häufiger Fehler in BEM ist die Verwendung von globalen Klassen wie h1 { color: red; }, was Konflikte zwischen verschiedenen Komponenten verursachen kann.",
+    code:null,
+  },
+  {
+    categoryId:2,
+    question:"Was bedeuten die folgenden Tags in HTML? : <table> , <tr> , <td>",
+    answer:"<table>: Definiert die gesamte Tabelle \n<tr>: Steht für 'table row' und erstellt eine Tabellenzeile \n<td>: Bedeutet 'table data' und repräsentiert eine einzelne Datenzelle",
+    code: "<table> \n <tr> \n<td>Zelle 1</td>\n<td>Zelle 2</td>\n</tr>\n</table>",
+  }
 ];

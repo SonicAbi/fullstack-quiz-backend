@@ -51,6 +51,8 @@ export const categories = [
   { id: 8, name: "Kotlin" },
   { id: 9, name: "Microservices" },
   {id: 10, name: "Android"},
+  {id: 11, name: "Zusatz"},
+  {id: 12, name: "Azure"},
 ];
 
 export type Question = z.infer<typeof selectQuestion>;

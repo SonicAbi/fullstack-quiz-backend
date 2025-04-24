@@ -5,27 +5,25 @@ export const htmlCssQuestions: NewQuestion[] = [
     categoryId: 2,
     question: "Wofür steht HTML und wofür dient es?",
     answer:
-      "HTML steht für 'Hypertext Markup Language' und wird verwendet, um den Inhalt und die Struktur von Webseiten zu definieren.",
+      "HTML steht für 'Hypertext Markup Language' und beschreibt den Aufbau von Webseiten.",
     code: null,
   },
   {
     categoryId: 2,
-    question: "Nenne mind. 5 Tags die man in einer HTML auffinden kann.",
+    question: "Nenne mindestens 5 HTML-Tags.",
+    answer: "Beispiele: h1, p, img, a, ul, li, div, span, form, input, button.",
+    code: null,
+  },
+  {
+    categoryId: 2,
+    question: "Was sind HTML-Attribute? Nenne 2 Beispiele.",
     answer:
-      "- Überschriften: h1 - h6\n- Absätze: p\n- Bilder: img\n- Links: a href=...\n- Listen: ungeordnet : ul mit li Elementen.\n- Abschnitte : div\n- Inline-Container: span\n- Formulare: form, input, buttons",
+      "Attribute geben HTML-Tags zusätzliche Infos. Beispiele: class, id, src, alt.",
     code: null,
   },
   {
     categoryId: 2,
-    question: "Was sind HTML-Attribute? Nenne 2.",
-    answer:
-      "HTML-Attribute geben den Tags zusätzliche Informationen oder ändern ihr Verhalten.\n- class und id\n- src, alt, style, title",
-    code: null,
-  },
-  {
-    categoryId: 2,
-    question:
-      "Welches HTML-Attribut benötigst du wenn du ein Pflichtfeld in einem Formular benötigst?",
+    question: "Welches Attribut brauchst du für ein Pflichtfeld im Formular?",
     answer: "required",
     code: null,
   },
@@ -33,83 +31,150 @@ export const htmlCssQuestions: NewQuestion[] = [
     categoryId: 2,
     question: "Was ist CSS und wofür wird es verwendet?",
     answer:
-      "CSS (Cascading Style Sheet) ist eine Stylesheet-Sprache, die verwendet wird, um das Aussehen von HTML-Dokumenten zu beschreiben.",
+      "CSS beschreibt das Aussehen von HTML-Elementen (z. B. Farben, Layout, Schrift).",
     code: null,
   },
   {
     categoryId: 2,
-    question: "Wozu wird ein CSS-Reset benötigt?",
+    question: "Wozu wird ein CSS-Reset verwendet?",
     answer:
-      "Damit die Standard-Styles des Browsers überschrieben werden und meine Styles bei jedem Browser gleich aussehen.",
+      "Damit alle Browser dieselben Standard-Styles nutzen und alles gleich aussieht.",
     code: null,
   },
   {
     categoryId: 2,
-    question:
-      "Welche CSS-Eigenschaft muss auf den Container angewendet werden, um Flexbox zu aktivieren?",
+    question: "Welche Eigenschaft aktiviert Flexbox?",
     answer: "display: flex;",
     code: null,
   },
   {
     categoryId: 2,
-    question:
-      "Worin liegt der Hauptunterschied zwischen Flexbox und Grid in Bezug auf das Layout?",
+    question: "Was ist der Unterschied zwischen Flexbox und Grid?",
     answer:
-      "Flexbox ist eindimensional und arbeitet entlang einer Haupt- und Querachse (horizontal oder vertikal). Grid ist zweidimensional und ermöglicht die Kontrolle über Zeilen und Spalten.",
+      "Flexbox ist einzeilig (1D), Grid ist zweizeilig (2D – Spalten und Zeilen).",
     code: null,
   },
   {
     categoryId: 2,
     question:
-      "Wie kannst du Flex-Items in einem Container von rechts nach links anordnen, ohne das HTML zu ändern?",
+      "Wie ordnest du Flex-Items von rechts nach links an (ohne HTML zu ändern)?",
     answer:
-      "Um Flex-Items von rechts nach links anzuordnen, ohne das HTML zu ändern, kannst du die folgenden CSS-Eigenschaften verwenden:",
-    code: "display: flex;\nflex-direction: row-reverse;",
+      "Mit den CSS-Eigenschaften display: flex; und flex-direction: row-reverse;",
+    code: null,
   },
   {
     categoryId: 2,
     question: "Was ist der Unterschied zwischen margin und padding?",
     answer:
-      "- margin: Der äußere Abstand eines Elements zum nächsten Element (außerhalb des Rahmens).\n- padding: Der innere Abstand zwischen dem Inhalt eines Elements und dessen Rahmen.",
+      "margin ist der Abstand außerhalb, padding ist der Abstand innerhalb des Elements.",
     code: null,
   },
   {
     categoryId: 2,
-    question: "Was versteht man unter dem Wort 'Responsive Design'?",
+    question: "Was bedeutet 'Responsive Design'?",
     answer:
-      "Ein Webseiten-Design, das sich der Bildschirmbreite anpasst (wichtig für Webseiten, die sowohl mobil als auch über PC schön aussehen sollen).",
+      "Ein Design, das sich an jede Bildschirmgröße anpasst (z. B. PC und Handy).",
+    code: null,
+  },
+  {
+    categoryId: 2,
+    question: "Was sind CSS-Variablen und wofür nutzt man sie?",
+    answer:
+      "Mit CSS-Variablen speichert man Werte wie Farben und nutzt sie mehrfach im Code.",
+    code: `:root {
+  --primary-color: #3498db;
+}`,
+  },
+  {
+    categoryId: 2,
+    question: "Was ermöglichen 'Media Queries'?",
+    answer:
+      "Sie machen das Design anpassbar an Bildschirmgrößen wie Smartphone oder Tablet.",
+    code: `@media screen and (max-width: 600px) {}`,
+  },
+  {
+    categoryId: 2,
+    question: "Was ist BEM und warum wird es verwendet?",
+    answer:
+      "BEM ist ein CSS-Namenssystem, das den Code klar und wiederverwendbar macht.",
+    code: null,
+  },
+  {
+    categoryId: 2,
+    question: "Was ist ein häufiger Fehler bei BEM?",
+    answer:
+      "Globale CSS-Regeln wie 'h1 { ... }' zu verwenden – das kann zu Konflikten führen.",
+    code: null,
+  },
+  {
+    categoryId: 2,
+    question: "Was bedeuten <table>, <tr> und <td> in HTML?",
+    answer: "<table> erstellt eine Tabelle, <tr> eine Zeile, <td> eine Zelle.",
+    code: `<table>
+  <tr>
+    <td>Beispielzelle</td>
+  </tr>
+</table>`,
+  },
+  {
+    categoryId: 2,
+    question: "Was ist das 'alt'-Attribut bei Bildern?",
+    answer:
+      "Es beschreibt den Bildinhalt und wird angezeigt, wenn das Bild nicht geladen werden kann.",
+    code: `<img src="bild.jpg" alt="Ein rotes Auto">`,
+  },
+  {
+    categoryId: 2,
+    question:
+      "Was ist der Unterschied zwischen einer ID und einer Klasse in HTML?",
+    answer:
+      "Eine ID ist eindeutig und wird nur einmal verwendet. Klassen können mehrfach genutzt werden.",
     code: null,
   },
   {
     categoryId: 2,
     question:
-      "Es können auch Custom Properties (CSS-Variablen) verwendet werden, was ist das und wozu dienen sie?",
+      "Wie kannst du in CSS alle Elemente einer bestimmten Klasse ansprechen?",
+    answer: `Mit einem Punkt vor dem Klassennamen, z. B. .box { ... } \n.box {
+  background-color: lightblue;
+}`,
+    code: null,
+  },
+  {
+    categoryId: 2,
+    question: "Was ist das Box-Modell in CSS?",
     answer:
-      "CSS-Variablen werden mit einem doppelten Bindestrich definiert und sind im :root-Selektor anzutreffen. Es sind sozusagen eigene Variablen. Wozu? Damit diese global verfügbar sind, der Code ist dadurch flexibler und leichter zu warten.",
-    code: ":root {\n  --primary-color: #3498db;\n}\nbody {\n  background-color: var(--primary-color);\n}",
+      "Das Box-Modell beschreibt den Aufbau eines Elements: Inhalt, Padding, Border und Margin.",
+    code: null,
   },
   {
-    categoryId:2,
-    question:"Was ermöglichen 'Media Queries'?",
-    answer:"Media Queries ermöglichen es, CSS-Regeln basierend auf Geräteeigenschaften wie Bildschirmbreite anzuwenden.",
-    code:"@media screen and (max-width: 600px) {/* CSS-Regeln für Bildschirme bis 600px Breite */}",
+    categoryId: 2,
+    question: "Wofür steht das HTML-Tag <label>?",
+    answer: "Es verbindet Text mit einem Eingabefeld in einem Formular.",
+    code: `<label for="email">E-Mail</label>
+<input type="email" id="email">`,
   },
   {
-    categoryId:2,
-    question:"Was ist BEM und warum wird es in der CSS-Entwicklung verwendet?",
-    answer:"BEM (Block, Element, Modifier) ist eine CSS-Methodologie, die darauf abzielt, sauberen, modularen und wartbaren Code zu schreiben. Sie wird verwendet, um die Struktur von CSS-Klassen klar und konsistent zu gestalten, sodass der Code leicht erweiterbar und wiederverwendbar ist.",
-    code:null
+    categoryId: 2,
+    question: "Wie verknüpfst du eine externe CSS-Datei mit HTML?",
+    answer: `Mit dem link-Tag im head-Bereich der HTML-Datei. \n<link rel="stylesheet" href="styles.css">`,
+    code: null,
   },
   {
-    categoryId:2,
-    question:"Was ist ein häufiger Fehler in der Anwendung von BEM?",
-    answer:" Ein häufiger Fehler in BEM ist die Verwendung von globalen Klassen wie h1 { color: red; }, was Konflikte zwischen verschiedenen Komponenten verursachen kann.",
-    code:null,
+    categoryId: 2,
+    question: "Was ist eine Pseudo-Klasse in CSS?",
+    answer:
+      "Eine Pseudo-Klasse beschreibt einen Zustand, z. B. :hover, :focus oder :first-child.",
+    code: null,
   },
   {
-    categoryId:2,
-    question:"Was bedeuten die folgenden Tags in HTML? : <table> , <tr> , <td>",
-    answer:"<table>: Definiert die gesamte Tabelle \n<tr>: Steht für 'table row' und erstellt eine Tabellenzeile \n<td>: Bedeutet 'table data' und repräsentiert eine einzelne Datenzelle",
-    code: "<table> \n <tr> \n<td>Zelle 1</td>\n<td>Zelle 2</td>\n</tr>\n</table>",
-  }
+    categoryId: 2,
+    question: "Was ist ein semantisches HTML-Element?",
+    answer:
+      "Ein Element, das den Inhalt beschreibt, z. B. header, main, section oder footer.",
+    code: `<section>
+  <h2>Über uns</h2>
+  <p>Wir stellen uns vor...</p>
+</section>`,
+  },
 ];

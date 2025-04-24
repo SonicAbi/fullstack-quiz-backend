@@ -112,4 +112,86 @@ export const reactQuestion: NewQuestion[] = [
       "Dynamisches Routing ermöglicht es, Routen zur Laufzeit anhand von URL-Parametern zu definieren.",
     code: null,
   },
+  {
+    categoryId: 3,
+    question: "Finde 3 Fehler im folgenden React-Komponenten-Code.",
+    answer:
+      "- ❌ 'app' sollte groß geschrieben werden (React-Komponenten starten mit Großbuchstaben)\n" +
+      "- ❌ Es fehlt das return-Statement\n" +
+      "- ❌ JSX muss ein einziges Element zurückgeben\n" +
+      "\n✅ Richtig wäre:\n" +
+      "function App() {\n" +
+      "  return (\n" +
+      "    <div>\n" +
+      "      <h1>Hallo</h1>\n" +
+      "      <p>Willkommen</p>\n" +
+      "    </div>\n" +
+      "  );\n" +
+      "}",
+    code: `function app() {
+  <h1>Hallo</h1>
+  <p>Willkommen</p>
+}`,
+  },
+  {
+    categoryId: 3,
+    question: "Was stimmt in diesem useEffect-Code nicht? Finde 3 Fehler.",
+    answer:
+      "- ❌ 'useeffect' ist falsch geschrieben (korrekt: useEffect)\n" +
+      "- ❌ Der Codeblock muss in eine Funktion (Callback) gelegt werden\n" +
+      "- ❌ Es fehlt das Dependency-Array\n" +
+      "\n✅ Richtig wäre:\n" +
+      "useEffect(() => {\n" +
+      '  console.log("Lade Daten");\n' +
+      "}, []);",
+    code: `useeffect(() => {
+  console.log("Lade Daten");
+})`,
+  },
+  {
+    categoryId: 3,
+    question: "Finde 3 Fehler im Umgang mit useState.",
+    answer:
+      "- ❌ useState ist nicht importiert\n" +
+      "- ❌ useState gibt ein Array zurück, kein direktes Objekt\n" +
+      "- ❌ Der State wird direkt verändert – das ist nicht erlaubt\n" +
+      "\n✅ Richtig wäre:\n" +
+      'import { useState } from "react";\n' +
+      "const [product, setProduct] = useState({});\n" +
+      'setProduct({ ...product, title: "Neu" });',
+    code: `function Product() {
+  const product = useState(null);
+  product.title = "Neu";
+}`,
+  },
+  {
+    categoryId: 3,
+    question: "Finde 3 Fehler beim Arbeiten mit Props.",
+    answer:
+      "- ❌ props.title wird als String statt als Ausdruck verwendet\n" +
+      "- ❌ Es fehlt das return-Statement\n" +
+      "- ❌ Kein Wrapper-Element (JSX erwartet ein einzelnes Element)\n" +
+      "\n✅ Richtig wäre:\n" +
+      "function Title(props) {\n" +
+      "  return <h1>{props.title}</h1>;\n" +
+      "}",
+    code: `function Title(props) {
+  <h1>props.title</h1>
+}`,
+  },
+  {
+    categoryId: 3,
+    question: "Was ist an diesem Tailwind-Setup falsch? Nenne 3 Dinge.",
+    answer:
+      "- ❌ Der Komponentenname sollte groß geschrieben sein ('Header')\n" +
+      "- ❌ In JSX muss 'className' statt 'class' verwendet werden\n" +
+      "- ❌ 'text-bold' ist keine gültige Tailwind-Klasse (korrekt: 'font-bold')\n" +
+      "\n✅ Richtig wäre:\n" +
+      "function Header() {\n" +
+      '  return <h1 className="font-bold">Hallo</h1>;\n' +
+      "}",
+    code: `function header() {
+  return <h1 class="text-bold">Hallo</h1>;
+}`,
+  },
 ];
